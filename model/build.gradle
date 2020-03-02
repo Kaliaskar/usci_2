@@ -1,0 +1,16 @@
+group = 'kz.bsbnb.usci'
+version = '0.1.0'
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
+}
+
+jar {
+    baseName = 'usci-model'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

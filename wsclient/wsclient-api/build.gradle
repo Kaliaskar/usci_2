@@ -1,0 +1,17 @@
+group = 'kz.bsbnb.usci.wsclient'
+version = '0.1.0'
+
+dependencies {
+    compile project(':model')
+    compile('org.springframework.cloud:spring-cloud-starter-openfeign')
+}
+
+jar {
+    baseName = 'usci-wsclient-api'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

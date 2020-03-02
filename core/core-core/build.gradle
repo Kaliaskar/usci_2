@@ -1,0 +1,30 @@
+group = 'kz.bsbnb.usci.core'
+version = '0.1.0'
+
+dependencies {
+    compile project(':eav:eav-core')
+    compile project(':eav:eav-meta')
+    compile project(':brms:brms-core')
+    compile project(':util:util-api')
+    compile project(':core:core-api')
+    compile project(':mail:mail-api')
+    
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
+
+    // библиотеки эцп
+    compile('kz.gamma:crypto-common10')
+    compile('kz.gamma:gammaprov11')
+
+    compile('com.itextpdf:itextpdf5513')
+}
+
+jar {
+    baseName = 'usci-core-core'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

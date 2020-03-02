@@ -1,0 +1,59 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+server:
+  port: 28765
+
+eureka:
+  client:
+    fetchRegistry: true
+    region: default
+    registryFetchIntervalSeconds: 5
+    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:58761/eureka}
+  instance:
+    preferIpAddress: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1300000
+
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 600000
+
+zuul:
+  prefix: /api/usci
+  routes:
+    core:
+      path: /core/**
+      serviceId: core
+      sensitive-headers: Set-Cookie,Authorization
+    receiver:
+      path: /receiver/**
+      serviceId: receiver
+      sensitive-headers: Set-Cookie,Authorization
+    sync:
+      path: /sync/**
+      serviceId: sync
+      sensitive-headers: Set-Cookie,Authorization
+    util:
+      path: /util/**
+      serviceId: util
+      sensitive-headers: Set-Cookie,Authorization
+    report:
+        path: /report/**
+        serviceId: report
+        sensitive-headers: Set-Cookie,Authorization
+    wsclient:
+      path: /wsclient/**
+      serviceId: wsclient
+      sensitive-headers: Set-Cookie,Authorization

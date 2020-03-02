@@ -1,0 +1,19 @@
+var label_ERROR = 'Ошибка';
+
+var label_DOWNLOAD = 'Загрузить профили';
+var label_SPISOK = 'Список профилей';
+var label_PROTECTED = 'Профиль защищен паролем';
+var label_PASSWORD = 'Пароль профиля: ';
+var label_GET_SERT = 'Получить сертификаты из профиля';
+var label_CANT_GET = 'Не удалось получить список сертификатов';
+var label_SERTIFICATE = 'Сертификат';
+var label_FILE_NAME = 'Имя файла';
+var label_REC_DATE = 'Дата получения';
+var label_SIGNED = 'Подписан';
+var label_SING_SAVE = 'Подписать и сохранить выбранные файлы';
+var label_CHOOSE_P = 'Выберите профиль';
+var label_CHOOSE_S = 'Выберите сертификат';
+var label_WAIT = 'Подождите...';
+var label_BATCHES_SAVED = 'Подписанные батчи сохранены';
+var label_CANCEL_SELECTED = 'Отменить загрузку выбранных файлов';
+var label_BATCHES_CANCELED = 'Выбранные батчи отменены';

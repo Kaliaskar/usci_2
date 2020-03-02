@@ -1,0 +1,18 @@
+group = 'kz.bsbnb.usci.receiver'
+version = '0.1.0'
+
+dependencies {
+    compile project(':eav:eav-api')
+
+    compile('org.springframework.cloud:spring-cloud-starter-openfeign')
+}
+
+jar {
+    baseName = 'usci-receiver-api'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

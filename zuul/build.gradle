@@ -1,0 +1,17 @@
+group = 'kz.bsbnb.usci'
+version '0.1.0'
+
+dependencies {
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-zuul')
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+}
+
+bootJar {
+    baseName = 'usci-zuul'
+    version = '0.1.0'
+}
+
+springBoot {
+    mainClassName = 'kz.bsbnb.usci.zuul.ZuulApplication'
+}

@@ -1,0 +1,9 @@
+.checkBox .x-form-checkbox {
+    width: 15px !important;
+    height: 15px !important;
+    background-image: url('../icons/unchecked.png') !important;
+    background-position: 0px 0px !important;
+}
+.checkBox.x-form-cb-checked .x-form-checkbox {
+    background-image: url('../icons/checked.png') !important;
+}

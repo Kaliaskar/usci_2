@@ -1,0 +1,24 @@
+group = 'kz.bsbnb.usci.util'
+version '0.1.0'
+
+dependencies {
+    compile project(':model')
+    compile project(':util:util-api')
+
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
+
+    compile("com.oracle:${ojdbcVersion}")
+}
+
+jar {
+    baseName = 'usci-util-core'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}
+
+
+

@@ -1,0 +1,25 @@
+server:
+  port: 50002
+
+eureka:
+  client:
+    region: default
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:58761/eureka}
+  instance:
+    preferIpAddress: true
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//172.17.110.122:1521/essp
+    username: system
+    password: manager
+
+sync:
+  threadLimit: 1000
+
+kafka:
+  bootstrap-server: 10.10.32.148:9092

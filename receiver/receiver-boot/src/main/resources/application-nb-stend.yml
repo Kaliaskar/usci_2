@@ -1,0 +1,54 @@
+server:
+  port: 50001
+  ssl:
+    enabled: true
+    key-store: classpath:eurekaclient.jks
+    key-store-password: eurekaclient
+    key-alias: eurekaclient
+    trust-store: classpath:eurekaclient.jks
+    trust-store-password: eurekaclient
+
+eureka:
+  client:
+    securePortEnabled: true
+    region: default
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:https://localhost:58761/eureka}
+  instance:
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+    securePort: ${server.port}
+    preferIpAddress: true
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//192.168.53.69:1521/essp
+    username: system
+    password: oracle
+  batch:
+    job:
+      enabled: false
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+batch:
+  maxBatchNumber: 10
+  entryDir: /opt/bsb/usci/batch-entries
+  save:
+    dir: /opt/bsb/usci/batches/upload
+  uploads:
+    dir: /opt/bsb/usci/batches/download
+
+sync:
+  host: 127.0.0.1
+
+kafka:
+  bootstrap-server: 10.8.1.191:9092
+  consumer-group: usci
+  topic: RECEIVER
+

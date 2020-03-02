@@ -1,0 +1,33 @@
+server:
+  port: 50007
+  ssl:
+    enabled: true
+    key-store: classpath:eurekaclient.jks
+    key-store-password: eurekaclient
+    key-alias: eurekaclient
+    trust-store: classpath:eurekaclient.jks
+    trust-store-password: eurekaclient
+
+eureka:
+  client:
+    securePortEnabled: true
+    region: default
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:https://localhost:58761/eureka}
+  instance:
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+    securePort: ${server.port}
+    preferIpAddress: true
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//192.168.53.69:1521/essp
+    username: system
+    password: oracle
+
+wsclient:
+  kgdUrl: 10.8.255.50:1274

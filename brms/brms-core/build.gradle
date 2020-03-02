@@ -1,0 +1,31 @@
+buildscript {
+    ext {
+        droolsVersion = '7.6.0.Final'
+    }
+}
+
+group = 'kz.bsbnb.usci.brms'
+version = '0.1.0'
+
+dependencies {
+    compile project(':model')
+    compile project(':util:util-api')
+    compile project(':eav:eav-api')
+    compile project(':brms:brms-api')
+
+    compile ("org.drools:drools-core:${droolsVersion}")
+    compile ("org.kie:kie-spring:${droolsVersion}")
+    compile ("org.drools:drools-compiler:${droolsVersion}")
+
+    runtime("com.oracle:${ojdbcVersion}")
+}
+
+jar {
+    baseName = 'usci-brms-core'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

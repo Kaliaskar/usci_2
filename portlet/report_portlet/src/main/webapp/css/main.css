@@ -1,0 +1,10 @@
+.checkBox .x-form-checkbox {
+    width: 15px !important;;
+    height: 15px !important;;
+    background-image: url('../pics/unchecked_checkbox.png') !important;;
+    background-position: -1px -1px !important;;
+}
+.checkBox.x-form-cb-checked .x-form-checkbox {
+    background-image: url('../pics/checked_checkbox.png') !important;
+    background-position: -1px -1px !important;;
+}

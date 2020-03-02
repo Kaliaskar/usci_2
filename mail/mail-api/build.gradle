@@ -1,0 +1,18 @@
+group = 'kz.bsbnb.usci.mail'
+version = '0.1.0'
+
+dependencies {
+    compile project(":model")
+
+    compile('org.springframework.cloud:spring-cloud-starter-openfeign')
+}
+
+jar {
+    baseName = 'usci-mail-api'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

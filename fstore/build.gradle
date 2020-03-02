@@ -1,0 +1,21 @@
+group = 'kz.bsbnb.usci'
+version = '0.1.0'
+
+dependencies {
+    compile project(':model')
+    compile project(':util:util-api')
+
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+    compile('org.springframework.cloud:spring-cloud-starter-openfeign')
+    compile('org.springframework.boot:spring-boot-starter-jdbc')
+    compile('org.springframework.boot:spring-boot-starter-web')
+}
+
+bootJar {
+    baseName = 'usci-fstore'
+    version = '0.1.0'
+}
+
+springBoot {
+    mainClassName = 'kz.bsbnb.usci.fstore.FstoreApplication'
+}

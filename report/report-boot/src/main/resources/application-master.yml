@@ -1,0 +1,44 @@
+server:
+  port: 50006
+  ssl:
+    enabled: true
+    key-store: classpath:eurekaclient.jks
+    key-store-password: eurekaclient
+    key-alias: eurekaclient
+    trust-store: classpath:eurekaclient.jks
+    trust-store-password: eurekaclient
+
+eureka:
+  client:
+    securePortEnabled: true
+    region: default
+    registryFetchIntervalSeconds: 5
+    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:https://localhost:58761/eureka}
+  instance:
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+    securePort: ${server.port}
+    preferIpAddress: true
+    instanceId: ${spring.cloud.client.ip-address}:${server.port}
+    hostname: ${spring.cloud.client.ip-address}
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//10.8.1.143:1521/essp
+    username: reporter
+    password: 1
+    hikari:
+        minimumIdle: 5
+        maximumPoolSize: 100
+        idleTimeout: 10000
+        maxLifetime: 6000000
+        connectionTimeout: 3000000
+        pool-name: ReportHikariPool
+
+jasper:
+  templatePath: /mnt/sdb1/bsb/usci/Portal_afn/template/Report/
+  reportFilesFolder: /mnt/sdb1/bsb/usci/Portal_afn/generated_reports/
+  recordBySheet: 50000
+

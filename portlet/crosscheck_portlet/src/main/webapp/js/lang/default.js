@@ -1,0 +1,27 @@
+var label_ERROR = 'Ошибка';
+
+var label_CRED = 'Респонденты';
+var label_PROCCESING = 'Идет формирование межформенного контроля…';
+var label_EXCEL = 'Выгрузить  в Excel';
+var label_CROSSCHECK = 'Межформенный контроль';
+var label_ORG_NAME = 'Наименование организации';
+var label_BEG_DATE = 'Дата начало контроля';
+var label_END_DATE = 'Дата завершения контроля';
+var label_STATUS = 'Статус';
+var label_USER = 'Пользователь';
+var label_PARAMETR = 'Показатель';
+var label_VALUE_KR = 'Значение в АИС ЕССП';
+var label_OUT_VALUE = 'Значение во внешнем источнике';
+var label_DIFF = 'Расхождение';
+var label_ORGS = 'Организаций';
+var label_R = 'Банк развития';
+var label_VU = 'Банк второго уровня';
+var label_PU = 'Банк первого уровня';
+var label_IO = 'Ипотечная организация';
+var label_OTHER = 'Прочие организации, осуществляющие отдельные виды банковских операций';
+var label_SELECT_ALL = 'Выбрать все';
+var label_OFF_SELECTED = 'Снять выделение';
+var label_ALL = 'Выделить все';
+var label_SHOW = 'Показать';
+var label_START = 'Запуск межформенного контроля';
+var label_DATA = 'Данные по контролю';

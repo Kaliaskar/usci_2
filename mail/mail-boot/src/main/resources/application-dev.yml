@@ -1,0 +1,23 @@
+server:
+  port: 50005
+
+eureka:
+  client:
+    region: default
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:58761/eureka}
+  instance:
+    preferIpAddress: true
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//172.17.110.122:1521/essp
+    username: system
+    password: manager
+
+mail:
+  host: 10.8.1.40
+  email: essp_portal@nationalbank.kz

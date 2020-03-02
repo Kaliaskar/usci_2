@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+<xsd:element name="entities" type="entities"/>
+
+<xsd:complexType name="entities">
+<xsd:sequence>
+<xsd:element name="ctr_transaction" type="ctr_transaction" minOccurs="1" maxOccurs="unbounded">
+<xsd:annotation>
+<xsd:documentation>Информация о валютной операции</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="ref_curr_trans_ppc">
+<xsd:annotation>
+<xsd:documentation>Код назначения платежа</xsd:documentation>
+</xsd:annotation>
+<xsd:all>
+<xsd:element name="code" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false">
+<xsd:annotation>
+<xsd:documentation>Код</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+
+<xsd:complexType name="ref_residency">
+<xsd:annotation>
+<xsd:documentation>Признак резиденства</xsd:documentation>
+</xsd:annotation>
+<xsd:all>
+<xsd:element name="code" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false">
+<xsd:annotation>
+<xsd:documentation>Код</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+
+<xsd:complexType name="ctr_transaction">
+<xsd:annotation>
+<xsd:documentation>Информация о валютной операции</xsd:documentation>
+</xsd:annotation>
+<xsd:all>
+<xsd:element name="curr_trans_date" type="date" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Дата</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="reference" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false">
+<xsd:annotation>
+<xsd:documentation>Референс валютной операции</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="cont_sum" type="xsd:double" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Сумма в тысячах единиц валюты</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="beneficiary" type="ctr_subject" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Бенефициар по платежному документу</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="cont_num" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Номер валютного договора</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="sender" type="ctr_subject" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Отправитель денег по платежному документу</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ref_curr_trans_ppc" type="ref_curr_trans_ppc" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Код назначения платежа (КНП)</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ref_currency" type="ref_currency" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Код валюты платежа</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="cont_date" type="date" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Дата валютного договора</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="cont_reg_num" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Учетный номер валютного договора</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+
+<xsd:complexType name="ref_country">
+<xsd:annotation>
+<xsd:documentation>Страны</xsd:documentation>
+</xsd:annotation>
+<xsd:all>
+<xsd:element name="code_alpha_2" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>2-значный код</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+
+<xsd:complexType name="ref_econ_sector">
+<xsd:annotation>
+<xsd:documentation>Код сектора экономики</xsd:documentation>
+</xsd:annotation>
+<xsd:all>
+<xsd:element name="code" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false">
+<xsd:annotation>
+<xsd:documentation>Код</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+
+<xsd:complexType name="ref_currency">
+<xsd:annotation>
+<xsd:documentation>Вид валюты</xsd:documentation>
+</xsd:annotation>
+<xsd:all>
+<xsd:element name="code" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Код</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="short_name" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Буквенный код</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+
+<xsd:complexType name="ctr_subject">
+<xsd:annotation>
+<xsd:documentation>Субъект валютной операции</xsd:documentation>
+</xsd:annotation>
+<xsd:all>
+<xsd:element name="ref_country" type="ref_country" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Код страны</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ref_residency" type="ref_residency" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Признак резидентства</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false">
+<xsd:annotation>
+<xsd:documentation>Наименование или фамилия, имя, отчество (при его наличии)</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="bin_iin" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Номер документа</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ref_econ_sector" type="ref_econ_sector" minOccurs="0" maxOccurs="1" nillable="true">
+<xsd:annotation>
+<xsd:documentation>Код сектора экономики</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+
+<xsd:simpleType name="date">
+<xsd:restriction base="xsd:string">
+<xsd:pattern value="[0-9][0-9].[0-9][0-9].[0-9][0-9][0-9][0-9]"/>
+</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="date_time">
+<xsd:restriction base="xsd:string">
+<xsd:pattern value="[0-9][0-9].[0-9][0-9].[0-9][0-9][0-9][0-9] [0-9][0-9]:[0-9][0-9]:[0-9][0-9]"/>
+</xsd:restriction>
+</xsd:simpleType>
+
+</xsd:schema>

@@ -1,0 +1,74 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+server:
+  port: 28765
+  ssl:
+    enabled: true
+    key-store: classpath:eureka.jks
+    key-store-password: eureka
+    key-alias: eureka
+    keyStoreType: JKS
+    trustStorePath: eureka.jks
+    trustStorePassword: eureka
+    trustStoreType: JKS
+
+eureka:
+  client:
+    fetchRegistry: true
+    region: default
+    registryFetchIntervalSeconds: 5
+    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:https://localhost:58761/eureka}
+  instance:
+    securePort: ${server.port}
+    securePortEnabled: true
+    nonSecurePortEnabled: false
+    preferIpAddress: true
+    instanceId: ${spring.cloud.client.ip-address}:${server.port}
+    hostname: ${spring.cloud.client.ip-address}
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1300000
+
+ribbon:
+  IsSecure: true
+  ConnectTimeout: 3000
+  ReadTimeout: 3000000
+
+zuul:
+  prefix: /api/usci
+  routes:
+    core:
+      path: /core/**
+      serviceId: core
+      sensitive-headers: Set-Cookie,Authorization
+    receiver:
+      path: /receiver/**
+      serviceId: receiver
+      sensitive-headers: Set-Cookie,Authorization
+    sync:
+      path: /sync/**
+      serviceId: sync
+      sensitive-headers: Set-Cookie,Authorization
+    util:
+      path: /util/**
+      serviceId: util
+      sensitive-headers: Set-Cookie,Authorization
+    report:
+        path: /report/**
+        serviceId: report
+        sensitive-headers: Set-Cookie,Authorization
+    wsclient:
+      path: /wsclient/**
+      serviceId: wsclient
+      sensitive-headers: Set-Cookie,Authorization

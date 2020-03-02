@@ -1,0 +1,19 @@
+group = 'kz.bsbnb.usci.core'
+version = '0.1.0'
+
+dependencies {
+    compile project(':model')
+    compile project(':eav:eav-api')    
+
+    compile('org.springframework.cloud:spring-cloud-starter-openfeign')
+}
+
+jar {
+    baseName = 'usci-core-api'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

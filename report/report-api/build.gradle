@@ -1,0 +1,22 @@
+group = 'kz.bsbnb.usci.report'
+version = '0.1.0'
+
+dependencies {
+
+    compile project(':model')
+    compile('net.sf.jasperreports:jasperreports670'){
+        exclude group: 'com.itextpdf', module: 'itextpdf'
+    }
+    compile('org.springframework.cloud:spring-cloud-starter-openfeign')
+
+}
+
+jar {
+    baseName = 'usci-report-api'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

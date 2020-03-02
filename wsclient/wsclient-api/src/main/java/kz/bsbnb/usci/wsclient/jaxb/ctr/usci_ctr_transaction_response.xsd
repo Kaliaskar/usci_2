@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+<xsd:element name="processingStatus">
+   <xsd:annotation>
+     <xsd:documentation>Информация о статусе обработки запроса.</xsd:documentation>
+   </xsd:annotation>
+   <xsd:complexType>
+	  <xsd:sequence>
+		 <xsd:element name="code">
+			<xsd:annotation>
+			   <xsd:documentation>Код статуса обработки запроса.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+			  <xsd:restriction base="xsd:int">
+				 <xsd:enumeration value="0">
+					<xsd:annotation>
+					   <xsd:documentation>Запрос успешно обработан.</xsd:documentation>
+					</xsd:annotation>
+				 </xsd:enumeration>
+				 <xsd:enumeration value="1">
+					<xsd:annotation>
+					   <xsd:documentation>Неверная ЭЦП.</xsd:documentation>
+					</xsd:annotation>
+				 </xsd:enumeration>
+				 <xsd:enumeration value="2">
+					<xsd:annotation>
+					   <xsd:documentation>Несоответствие запроса установленной схеме данных (XSD).</xsd:documentation>
+					</xsd:annotation>
+				 </xsd:enumeration>
+				 <xsd:enumeration value="3">
+					<xsd:annotation>
+					   <xsd:documentation>Ошибка логического контроля данных запроса.</xsd:documentation>
+					</xsd:annotation>
+				 </xsd:enumeration>
+				 <xsd:enumeration value="4">
+					<xsd:annotation>
+					   <xsd:documentation>Техническая ошибка обработки запроса.</xsd:documentation>
+					</xsd:annotation>
+				 </xsd:enumeration>
+			  </xsd:restriction>
+			</xsd:simpleType>
+		 </xsd:element>
+		 <xsd:element name="description">
+			<xsd:annotation>
+			   <xsd:documentation>Текстовое описание статуса обработки запроса.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+			  <xsd:restriction base="xsd:string">
+				 <xsd:minLength value="1"/>
+			  </xsd:restriction>
+			</xsd:simpleType>
+		 </xsd:element>
+	  </xsd:sequence>
+   </xsd:complexType>
+</xsd:element>
+					 
+</xsd:schema>

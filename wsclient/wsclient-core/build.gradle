@@ -1,0 +1,26 @@
+group = 'kz.bsbnb.usci.wsclient'
+version = '0.1.0'
+
+dependencies {
+    compile project(':model')
+    compile project(':wsclient:wsclient-api')
+    compile project(':util:util-api')
+
+    compile ("org.springframework.boot:spring-boot-starter-web")
+    compile ("org.springframework.boot:spring-boot-starter-web-services")
+    compile ("org.springframework.boot:spring-boot-starter-jdbc")
+    compile("org.apache.httpcomponents:httpclient:4.5.3")
+    compile("org.apache.cxf:cxf-spring-boot-starter-jaxws:3.2.1")
+
+    compile("com.oracle:${ojdbcVersion}")
+}
+
+jar {
+    baseName = 'usci-wsclient-core'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

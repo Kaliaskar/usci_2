@@ -1,0 +1,73 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.0.RELEASE'
+        springCloudVersion = 'Finchley.M9'
+        gsonVersion = '2.8.2'
+        ojdbcVersion = 'ojdbc8'
+        feignVersion = '2.0.1.RELEASE'
+        springKafkaVersion = '2.1.4.RELEASE'
+        slf4jVersion = '1.7.25'
+        modelMapperVersion = '0.7.5'
+        ribbonCoreVersion = '2.7.16'
+        ribbonLoadBalancerVersion = '2.7.16'
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://repo.spring.io/milestone" }
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath( "io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE")
+    }
+}
+
+allprojects {
+    group = "kz.bsbnb.usci"
+    version = '0.1.0'
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    compileJava.options.encoding = 'UTF-8'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+subprojects {
+    repositories {
+        flatDir {
+            // некоторых библиотек нет в публичных репозиториях, поэтому держим локально
+            dirs "${rootProject.projectDir}/libs"
+        }
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://repo.spring.io/milestone" }
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencyManagement {
+        imports {
+            mavenBom("org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}")
+            mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+            mavenBom("org.springframework.cloud:spring-cloud-openfeign:${feignVersion}")
+        }
+    }
+
+    dependencies {
+        compile("org.apache.httpcomponents:httpclient:4.5.3")
+        compile("com.google.code.gson:gson:${gsonVersion}")
+        compile("org.slf4j:slf4j-api:${slf4jVersion}")
+        compile("org.springframework.boot:spring-boot-configuration-processor")
+        testCompile("org.springframework.boot:spring-boot-starter-test")
+    }
+
+}

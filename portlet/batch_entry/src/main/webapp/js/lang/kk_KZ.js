@@ -1,0 +1,14 @@
+var label_SEND = 'Жіберу';
+var label_VIEW = 'Көру';
+var label_REP_DATE = 'Есепті күн';
+var label_DATE = 'Құру күні';
+var label_CODE = 'Код';
+var label_DEL = 'Өшіру';
+var label_CLOSE = 'Жабу';
+var LABEL_SEND_APPROVAL = 'Өзгерістер сәтті  жөнелтілді.Статусын хаттамадан қараңыз';
+var LABEL_SUCCESS = 'Операцияны сәтті аяқтау';
+var label_ERROR = 'Қате';
+var label_WAIT = 'Күте тұрыңыз…';
+var label_NO_DATA = 'Бейнелеу  үшін  деректер жоқ';
+var label_NOTES = 'Жазбалар';
+var label_PANEL = 'Деректер панелі';

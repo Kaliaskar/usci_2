@@ -1,0 +1,19 @@
+var label_ERROR = 'Қате';
+
+var label_DOWNLOAD = 'Профилді жүктеу';
+var label_SPISOK = 'Профилдер тізімі';
+var label_PROTECTED = 'Профил паролмен қорғалған';
+var label_PASSWORD = 'Профил паролі:';
+var label_GET_SERT = 'Профилден сертификатты алу ';
+var label_CANT_GET = 'Сертификаттар тізімін алу мүмкін болмады';
+var label_SERTIFICATE = 'Сертификат';
+var label_FILE_NAME = 'Файлдың атауы';
+var label_REC_DATE = 'Алу күні';
+var label_SIGNED = 'Қол қойылды';
+var label_SING_SAVE = 'Таңдап алынған файлдарға қол қою және сақтау ';
+var label_CHOOSE_P = 'Профилді таңдаңыз';
+var label_CHOOSE_S = 'Сертификатты таңдаңыз';
+var label_WAIT = 'Күте тұрыңыз';
+var label_BATCHES_SAVED = 'Қол қойылған батч кодтар сақталынды ';
+var label_CANCEL_SELECTED = 'Таңдалған файлдарды жүктеуді тоқтату';
+var label_BATCHES_CANCELED = 'Таңдап алынған батч кодтар тоқтатылды.';

@@ -1,0 +1,25 @@
+group = 'kz.bsbnb.usci.mail'
+version = '0.1.0'
+
+dependencies {
+    compile project(':model')
+    compile project(':core:core-api')
+    compile project(':mail:mail-core')
+
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+    compile('org.springframework.cloud:spring-cloud-starter-openfeign')
+    compile('org.springframework.boot:spring-boot-starter-jdbc')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+
+    compile("com.oracle:${ojdbcVersion}")
+}
+
+bootJar {
+    baseName = 'usci-mail-boot'
+    version = '0.1.0'
+}
+
+springBoot {
+    mainClassName = 'kz.bsbnb.usci.mail.MailApplication'
+}

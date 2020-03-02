@@ -1,0 +1,23 @@
+server:
+  port: 58761
+  ssl:
+    enabled: true
+    key-store: classpath:eureka.jks
+    key-store-password: eureka
+    trust-store: classpath:eureka.jks
+    trust-store-password: eureka
+    key-alias: eureka
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: https://localhost:58761/eureka
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    eviction-interval-timer-in-ms: 2000
+  instance:
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+    securePort: ${server.port}

@@ -1,0 +1,21 @@
+var label_ERROR = 'Қате';
+var label_RETURN = 'Есептер тізіліміне қайта оралу';
+var label_FILTER = 'Филтрді қосу';
+var label_CHOSEN = 'Есеп таңдалынды';
+var label_PARAMETRS = 'Енгізу парамерлерін толтырыңыз';
+var label_REPORT = 'XLS есепті жүктеу';
+var label_TABLE = 'Есеп кестесін жүктеу ';
+
+var label_REPORTING = 'Есепті құрастыру орындалуда... ';
+var label_REP_NAME = 'Есептің атауы';
+var LABEL_USER = 'Пайдаланушы';
+var label_BEG_TIME = 'Басталу уақыты ';
+var label_END_TIME = 'Аяқталу уақыты ';
+var label_COMMENT = 'Пікірлер';
+var label_REFRESH = 'Жаңарту';
+var label_OUTPUT = 'Шығыс формалары';
+var label_SPISOK = 'Есептер тізімі';
+var label_FINISHED = 'Жасалған есептер';
+var label_FILES = 'Файлдар';
+var label_FILE_NAME = 'Файлдың атауы';
+var label_DOWNLOAD = 'Жүктеу';

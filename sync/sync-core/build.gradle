@@ -1,0 +1,22 @@
+group = 'kz.bsbnb.usci.sync'
+version '0.1.0'
+
+dependencies {
+    compile project(':util')
+    compile project(':eav:eav-api')
+    compile project(':sync:sync-api')
+    compile project(':receiver:receiver-api')    
+
+    runtime("org.springframework.boot:spring-boot-starter-web")
+    runtime("org.springframework.boot:spring-boot-starter-jdbc")
+}
+
+jar {
+    baseName = 'usci-sync-core'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

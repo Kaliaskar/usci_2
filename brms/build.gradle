@@ -1,0 +1,6 @@
+group 'kz.bsbnb.usci'
+version '0.1.0'
+
+bootJar {
+    enabled = false
+}

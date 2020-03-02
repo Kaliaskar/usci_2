@@ -1,0 +1,33 @@
+buildscript {
+    ext {
+        gsonVersion = '2.8.2'
+        guavaVersion = '11.0.2'
+    }
+}
+
+group = 'kz.bsbnb.usci.eav'
+version = '0.1.0'
+
+dependencies {
+    compile project(':model')
+    compile project(':eav:eav-api')
+    compile project(':eav:eav-meta')
+    compile project(':brms:brms-core')
+    compile project(':util:util-api')    
+
+    compile ("org.springframework.boot:spring-boot-starter-web")
+    compile ("org.springframework.boot:spring-boot-starter-jdbc")
+
+    compile("com.google.guava:guava:${guavaVersion}")
+    compile("com.oracle:${ojdbcVersion}")
+}
+
+jar {
+    baseName = 'usci-eav-core'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

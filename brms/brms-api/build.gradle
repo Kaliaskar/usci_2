@@ -1,0 +1,18 @@
+group = 'kz.bsbnb.usci.brms'
+version = '0.1.0'
+
+dependencies {
+    compile project(':model')
+    compile project(':eav:eav-api')
+    compile project(':util:util-api')
+}
+
+jar {
+    baseName = 'usci-brms-api'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

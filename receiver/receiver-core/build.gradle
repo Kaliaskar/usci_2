@@ -1,0 +1,31 @@
+group = 'kz.bsbnb.usci.receiver'
+version = '0.1.0'
+
+dependencies {
+    compile project(':model')
+    compile project(':util:util-api')
+    compile project(':eav:eav-core')
+    compile project(':eav:eav-meta')
+    compile project(':core:core-api')
+    compile project(':sync:sync-api')
+    compile project(':mail:mail-api')
+
+    compile('org.springframework.boot:spring-boot-starter-batch')
+    compile('org.springframework.cloud:spring-cloud-starter-openfeign')
+    compile("org.springframework.kafka:spring-kafka:${springKafkaVersion}")
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-ribbon')
+
+    compile('org.apache.commons:commons-compress:1.16.1')
+    compile('kz.gamma:crypto-common10')
+    compile('kz.gamma:gammaprov11')
+}
+
+jar {
+    baseName = 'usci-receiver-core'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

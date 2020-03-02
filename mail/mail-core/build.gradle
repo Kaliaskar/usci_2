@@ -1,0 +1,24 @@
+group = 'kz.bsbnb.usci.mail'
+version = '0.1.0'
+
+dependencies {
+    compile project(':model')
+    compile project(':util:util-api')
+    compile project(':util:util-core')
+    compile project(':core:core-api')
+    compile project(':mail:mail-api')
+
+    compile('org.springframework.boot:spring-boot-starter-mail')
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
+    compile('org.springframework.boot:spring-boot-starter-web')
+}
+
+jar {
+    baseName = 'usci-mail-core'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

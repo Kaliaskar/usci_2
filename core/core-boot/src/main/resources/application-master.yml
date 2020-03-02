@@ -1,0 +1,44 @@
+server:
+  port: 50003
+  ssl:
+    enabled: true
+    key-store: classpath:eurekaclient.jks
+    key-store-password: eurekaclient
+    key-alias: eurekaclient
+    trust-store: classpath:eurekaclient.jks
+    trust-store-password: eurekaclient
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//10.8.1.143:1521/essp
+    username: eav_backend
+    password: 1
+    hikari:
+      minimumIdle: 500
+      maximumPoolSize: 1000
+      idleTimeout: 10000
+      maxLifetime: 180000000
+      connectionTimeout: 30000
+      leak-detection-threshold: 30000
+      pool-name: UsciHikariPool
+
+logging:
+  level:
+    com.zaxxer.hikari: debug
+
+eureka:
+  client:
+    securePortEnabled: true
+    region: default
+    registryFetchIntervalSeconds: 5
+    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:https://localhost:58761/eureka}
+  instance:
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+    securePort: ${server.port}
+    preferIpAddress: true
+    instanceId: ${spring.cloud.client.ip-address}:${server.port}
+    hostname: ${spring.cloud.client.ip-address}
+

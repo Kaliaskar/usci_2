@@ -1,0 +1,39 @@
+var label_DELETED = 'Правило удалено';
+var label_ERROR = 'Ошибка';
+var label_NAME = 'Название';
+var label_ADD = 'добавить';
+var label_CANCEL = 'сброс';
+var label_WAIT = 'Подождите…';
+var label_INFO = 'Информация';
+var label_CACHE = 'Кэш очищен';
+var label_ERR_CACHE = 'Ошибка. Кэш не очищен';
+var label_HISTORY = 'история';
+var lable_REFRESH = 'обновить';
+var label_POCKETS = 'пакеты';
+var label_SEARCH = 'Поиск';
+var label_NO_VERSION = 'Нет версии пакета';
+var label_CAN = 'отменить';
+var label_SAVE = 'сохранить';
+var label_REFRESHED = 'Правило обновлено';
+var label_DEL = 'удалить';
+var label_CONFIRM = 'Потверждение';
+var label_WANT_DEL = 'Вы точно хотите удалить правило ?';
+var label_CHOOSE_POCK = 'Выберите пакет';
+var label_DATE = 'дата';
+var label_NO_ERRORS = 'ошибок нет';
+
+var label_OPEN_DATE = 'Дата открытия';
+var label_END_DATE = 'Дата закрытия';
+var label_HIS = 'История';
+
+var label_NEW_RULE = 'Новое правило';
+var label_POCK = 'пакет';
+var label_NAME_LIL = 'название';
+var label_ADD_BIG = 'Добавить';
+var label_ADDED = 'Правило добавлено';
+
+var label_PACK_CON = 'Управление пакетами';
+var label_PACK_NAME = 'Название пакета: ';
+var label_NEW_PACK = 'Новый пакет добавлен';
+var label_DEL_BIG = 'Удалить';
+var label_REFRESH_BIG = 'Обновить';

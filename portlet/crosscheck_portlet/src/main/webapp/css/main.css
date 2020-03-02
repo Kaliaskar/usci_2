@@ -1,0 +1,25 @@
+.checkBox .x-form-checkbox {
+    width: 15px;
+    height: 15px;
+    background-image: url('../pics/unchecked_checkbox.png');
+    background-position: 0px 0px;
+}
+.checkBox.x-form-cb-checked .x-form-checkbox {
+    width: 15px;
+    height: 15px;
+    background-image: url('../pics/checked_checkbox.png');
+    background-position: 0px 0px;
+}
+
+.radioButton .x-form-radio {
+    width: 15px;
+    height: 15px;
+    background-image: url('../pics/unchecked_checkbox.png');
+    background-position: -1px -1px;
+}
+.radioButton.x-form-cb-checked .x-form-radio {
+    width: 15px;
+    height: 15px;
+    background-image: url('../pics/checked_checkbox.png');
+    background-position: -1px -1px;
+}

@@ -1,0 +1,23 @@
+group = 'kz.bsbnb.usci.core'
+version = '0.1.0'
+
+dependencies {
+    compile project(':core:core-core')
+    
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-jdbc')
+    compile('org.springframework.boot:spring-boot-starter-batch')
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+
+    compile('org.apache.commons:commons-compress:1.16.1')
+}
+
+bootJar {
+    baseName = 'usci-core-boot'
+    version = '0.1.0'
+}
+
+springBoot {
+    mainClassName = 'kz.bsbnb.usci.core.CoreApplication'
+}

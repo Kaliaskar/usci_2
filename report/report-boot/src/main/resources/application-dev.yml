@@ -1,0 +1,24 @@
+server:
+  port: 50006
+
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:58761/eureka}
+  instance:
+    preferIpAddress: true
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//172.17.110.122:1521/essp
+    username: system
+    password: manager
+
+jasper:
+  templatePath: D:/essp/Portal_afn/template/Report/
+  reportFilesFolder: D:/essp/Portal_afn/generated_reports/
+  recordBySheet: 50000
+

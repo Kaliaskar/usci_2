@@ -1,0 +1,28 @@
+group = 'kz.bsbnb.usci.report'
+version = '0.1.0'
+
+
+dependencies {
+    compile project(':report:report-api')
+    compile project(':util:util-api')
+    compile project(':core:core-api')
+    compile project(':wsclient:wsclient-api')
+    compile ('org.json:json:20090211')
+    compile ('net.sourceforge.jexcelapi:jxl:2.6.12')
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
+
+    compile group: 'org.apache.poi', name: 'poi', version: '4.0.1'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.0.1'
+    compile("com.oracle:${ojdbcVersion}")
+}
+
+jar {
+    baseName = 'usci-report-core'
+    version = '0.1.0'
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}

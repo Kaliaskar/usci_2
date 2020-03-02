@@ -1,0 +1,39 @@
+var label_DELETED = 'Ереже жойылды';
+var label_ERROR = 'Қате';
+var label_NAME = 'Атауы';
+var label_ADD = 'қосу';
+var label_CANCEL = 'түсіру';
+var label_WAIT = 'Күте түрыңыз';
+var label_INFO = 'Ақпарат';
+var label_CACHE = 'Кэш тазартылды';
+var label_ERR_CACHE = 'Қате.Кэш тазартылмады.';
+var label_HISTORY = 'тарих';
+var lable_REFRESH = 'жаңарту';
+var label_POCKETS = 'пакеттер';
+var label_SEARCH = 'Іздеу';
+var label_NO_VERSION = 'Пакеттің нұсқасы жоқ';
+var label_CAN = 'болдырмау';
+var label_SAVE = 'сақтау';
+var label_REFRESHED = 'Ереже жаңартылды';
+var label_DEL = 'жою';
+var label_CONFIRM = 'Растау';
+var label_WANT_DEL = 'Сіз шынымен Ережені жойғыңыз келеді ме?';
+var label_CHOOSE_POCK = 'Пакетті таңдаңыз';
+var label_DATE = 'күн';
+var label_NO_ERRORS = 'қате жоқ';
+
+var label_OPEN_DATE = 'Ашылу күні';
+var label_END_DATE = 'Жабылу күні';
+var label_HIS = 'Тарих';
+
+var label_NEW_RULE = 'Жаңа ереже';
+var label_POCK = 'пакет';
+var label_NAME_LIL = 'атауы';
+var label_ADD_BIG = 'Қосу';
+var label_ADDED = 'Ереже қосылды';
+
+var label_PACK_CON = 'Пакеттерді басқару';
+var label_PACK_NAME = 'Пакеттің атауы:';
+var label_NEW_PACK = 'Жаңа пакет қосылды';
+var label_DEL_BIG = 'Жою';
+var label_REFRESH_BIG = 'Жаңарту';
